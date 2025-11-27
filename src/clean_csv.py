@@ -23,5 +23,4 @@ if __name__ == "__main__":
 
     input_file = sys.argv[1]
     output_file = sys.argv[2]
-
     clean_csv(input_file, output_file)
