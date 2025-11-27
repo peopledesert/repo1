@@ -19,3 +19,25 @@ for nombre_archivo in os.listdir(carpeta):
         # Renombrar
         os.rename(ruta_completa, nueva_ruta)
         print(f"Renombrado: {nombre_archivo} → {nuevo_nombre}")
+
+
+import os
+import shutil
+
+carpeta = "archivos"  # carpeta origen
+destinos = {
+    "imagenes": [".jpg", ".png", ".jpeg", ".gif"],
+    "documentos": [".pdf", ".docx", ".txt"],
+    "csv": [".csv"]
+}
+
+for archivo in os.listdir(carpeta):
+    ruta = os.path.join(carpeta, archivo)
+    if os.path.isfile(ruta):
+        _, ext = os.path.splitext(archivo)
+        for carpeta_dest, extensiones in destinos.items():
+            if ext.lower() in extensiones:
+                destino = os.path.join(carpeta, carpeta_dest)
+                os.makedirs(destino, exist_ok=True)
+                shutil.move(ruta, os.path.join(destino, archivo))
+                print(f"Movido: {archivo} → {carpeta_dest}")
