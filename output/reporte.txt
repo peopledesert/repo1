@@ -1,0 +1,12 @@
+shape:
+(4, 3)
+
+columns:
+['name', 'age', 'city']
+
+missing:
+{'name': 0, 'age': 1, 'city': 1}
+
+describe:
+{'name': {'count': 4, 'unique': 3, 'top': 'Ana', 'freq': 2, 'mean': nan, 'std': nan, 'min': nan, '25%': nan, '50%': nan, '75%': nan, 'max': nan}, 'age': {'count': 3.0, 'unique': nan, 'top': nan, 'freq': nan, 'mean': 28.333333333333332, 'std': 2.886751345948129, 'min': 25.0, '25%': 27.5, '50%': 30.0, '75%': 30.0, 'max': 30.0}, 'city': {'count': 3, 'unique': 2, 'top': 'Paris', 'freq': 2, 'mean': nan, 'std': nan, 'min': nan, '25%': nan, '50%': nan, '75%': nan, 'max': nan}}
+
